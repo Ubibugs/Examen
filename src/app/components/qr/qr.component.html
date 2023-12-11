@@ -1,0 +1,24 @@
+<ion-content class="ion-padding ion-text-center">
+  
+  <div class="ion-padding-bottom">
+    <h1>
+      ¡Bienvenid@ {{ usuario.nombre }} {{ usuario.apellido }}!
+    </h1>
+    <ion-img src="assets/estudiantes.png" class="imagen" *ngIf="!escaneando"></ion-img>
+  </div>
+
+  <ion-button *ngIf="!escaneando" (click)="comenzarEscaneoQR()">
+    <ion-icon slot="start" name="videocam-outline"></ion-icon>
+    COMENZAR ESCANEO QR
+  </ion-button>
+
+  <ion-button *ngIf="escaneando && plataforma === 'web'" (click)="detenerEscaneoQR()">
+    <ion-icon slot="start" name="stop-circle-outline"></ion-icon>
+    DETENER ESCANEO QR
+  </ion-button>
+
+  <video #video [hidden]="!escaneando" width="100%"></video>
+  <canvas #canvas hidden></canvas>
+
+</ion-content>
+

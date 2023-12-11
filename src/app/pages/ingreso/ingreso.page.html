@@ -1,0 +1,30 @@
+<ion-content class="full-page">
+  <img src="../assets/img/duoc.avif" alt="Imagen de fondo" class="background-image">
+  
+  <div class="content-container">
+    <ion-title class="ion-text-center">
+      <ion-img src="assets/logo_duoc.png" class="imagen"></ion-img>
+      <h4>Sistema de Asistencia DUOC</h4>
+    </ion-title>
+
+    <ion-card-content class="login ion-fade-in-up ion-animatable">
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input [(ngModel)]="correo" type="text" labelPlacement="floating" placeholder="Ingresa tu correo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="password" type="password" labelPlacement="floating" placeholder="Ingresa tu contraseña"></ion-input>
+      </ion-item>
+    
+      <ion-row>
+        <ion-col size="12">
+          <br>
+          <ion-button (click)="ingresar()" class="">Iniciar Sesion</ion-button>
+        <ion-button (click)="contrasena()" class="">Olvide mi Contraseña</ion-button>
+        <ion-button (click)="registro()" class="">Registro</ion-button>
+      </ion-col>
+    </ion-row>
+    </ion-card-content>
+  </div>
+</ion-content>

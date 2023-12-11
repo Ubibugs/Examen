@@ -1,0 +1,154 @@
+
+.full-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Esto establece la altura de la página al 100% de la altura de la ventana del navegador */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen cubra todo el espacio disponible */
+  position: absolute; /* Posiciona la imagen encima del contenido */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+
+#video, #canvas {
+  width: 100%;
+  max-width: 400px; 
+  border: 1px solid #040318;
+  margin-bottom: 20px;
+}
+
+#start-button, #stop-button {
+  padding: 10px 20px;
+  background-color: #ff873c; 
+  color: #ede9dfa1;
+  border: 1px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#stop-button {
+  background-color: #dc3545; 
+}
+
+
+#error-message {
+  color: #dc3545;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+p, h1, h2, h3 {
+  text-align: center;
+  margin: 0;
+}
+
+/* Estilos para la tarjeta principal */
+.qr-card {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el título de la tarjeta */
+.qr-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Color de texto principal */
+  margin-bottom: 20px;
+}
+
+/* Estilos para los datos QR */
+.qr-data, .no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.qr-data p, .no-data p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Estilos para los íconos */
+.qr-icon, .no-data-icon {
+  font-size: 48px;
+  color: #040318; /* Color azul para datos QR, puedes personalizarlo */
+  margin-bottom: 10px;
+}
+
+.no-data-icon {
+  color: #ff873c; /* Color rojo para la falta de datos */
+}
+
+/* Animación de bienvenida */
+.ion-fade-in {
+  animation: fadein 1.5s ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scan-button,
+.stop-button {
+  width: 300px; /* Ajusta el ancho del botón según tus necesidades */
+  margin: 0 auto; /* Centra horizontalmente el botón */
+  padding: 10px;
+}
+
+/* Animación de tarjeta QR */
+.ion-fade-in-up {
+  animation: fadeinup 1s ease-in-out;
+}
+
+@keyframes fadeinup {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Agrega más estilos según tus preferencias y necesidades */
+
+
+
+
+
+/* Establece el color de texto negro y centra el texto */
+ion-card-title,
+ion-card-content {
+  color: black;
+  text-align: center;
+}
+
+/* Establece el color de texto negro y centra el texto en las celdas de la tabla */
+table {
+  width: 100%;
+  td {
+    color: black;
+    text-align: center;
+    padding: 10px; /* Espacio alrededor del contenido de la celda */
+  }
+}

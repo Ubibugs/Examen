@@ -1,0 +1,27 @@
+<ion-content class="full-page">
+  <img src="../assets/img/personas.avif" alt="Imagen de fondo" class="background-image">
+
+  <div class="content-container">
+    <ion-title class="ion-text-center">
+      <ion-img src="assets/logo_duoc.png" class="imagen"></ion-img>
+      <h4>Recuperacion de contraseña DUOC</h4>
+    </ion-title>
+
+
+    <ion-card-content class="login ion-fade-in-up ion-animatable">
+      <ion-title>
+      <h2>PASO 1</h2>
+      <h2>Ingresa tu correo</h2>
+      <br>
+      </ion-title>
+        <ion-input labelplacement="floating" [(ngModel)]="correo" placeholder="Ingresa tu correo"></ion-input>
+    
+      <ion-row>
+        <ion-col size="12">
+          <br>
+          <ion-button shape="block" (click)="recuperarContrasena()">Recuperar Contraseña</ion-button>
+          <ion-button expand="block" class="ion-margin-top"  (click)="volverAlInicio()"> Iniciar Sesion </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+
